@@ -25,12 +25,14 @@ curl -X POST \
           }
         ]
       },
-      "assignee": { "accountId": "5b10ac8d82e05b22cc7d4ef5" },
+      "assignee": { "accountId": "YOUR_ACCOUNT_ID" },
       "priority": { "name": "High" },
       "labels": ["devops", "infrastructure"]
     }
   }'
 ```
+
+Replace `YOUR_ACCOUNT_ID` with a real Atlassian account ID. Find account IDs via `GET /rest/api/3/user/search?query=name`.
 
 **Response:**
 ```json
@@ -136,7 +138,7 @@ curl -X POST \
       "parent": { "key": "PROJ-101" },
       "issuetype": { "name": "Subtask" },
       "summary": "Write unit tests for auth module",
-      "assignee": { "accountId": "5b10ac8d82e05b22cc7d4ef5" }
+      "assignee": { "accountId": "YOUR_ACCOUNT_ID" }
     }
   }'
 ```

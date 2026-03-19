@@ -95,7 +95,7 @@ curl -X POST \
   -d '{
     "transition": { "id": "21" },
     "fields": {
-      "assignee": { "accountId": "5b10ac8d82e05b22cc7d4ef5" }
+      "assignee": { "accountId": "YOUR_ACCOUNT_ID" }
     },
     "update": {
       "labels": [
