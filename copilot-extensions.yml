@@ -1,0 +1,135 @@
+name: JiraGenius
+description: >
+  An expert Jira Cloud REST API plugin that provides sub-agents and skills
+  for configuring, managing, and supporting Jira Cloud instances.
+  Based on the official Jira Cloud REST API v3 documentation at
+  https://developer.atlassian.com/cloud/jira/platform/rest/v3/intro/#about
+
+version: 1.0.0
+publisher: promptclickrun
+repository: https://github.com/promptclickrun/JiraGenius
+
+agents:
+  - name: coordinator
+    description: >
+      Main orchestrator agent that analyzes incoming Jira-related requests,
+      determines the appropriate specialist sub-agent, and delegates the task.
+      Handles multi-step workflows that span multiple domains.
+    prompt_file: agents/coordinator.md
+    skills:
+      - authentication
+      - rest-api-v3
+      - error-handling
+
+  - name: issue-manager
+    description: >
+      Expert in all issue-related operations including creating, reading,
+      updating, deleting, transitioning, commenting, attaching files,
+      and linking issues via the Jira Cloud REST API.
+    prompt_file: agents/issue-manager.md
+    skills:
+      - authentication
+      - rest-api-v3
+      - error-handling
+      - pagination
+      - bulk-operations
+
+  - name: project-admin
+    description: >
+      Specialist in Jira project lifecycle management including creation,
+      configuration, component management, version tracking, and
+      project-level scheme assignments.
+    prompt_file: agents/project-admin.md
+    skills:
+      - authentication
+      - rest-api-v3
+      - error-handling
+
+  - name: workflow-designer
+    description: >
+      Expert in Jira workflow design, configuration, and management.
+      Handles statuses, transitions, conditions, validators, post-functions,
+      and workflow schemes.
+    prompt_file: agents/workflow-designer.md
+    skills:
+      - authentication
+      - rest-api-v3
+      - error-handling
+
+  - name: search-analyst
+    description: >
+      JQL query expert for constructing advanced searches, creating and
+      managing filters, building dashboards, and generating reports
+      from Jira data.
+    prompt_file: agents/search-analyst.md
+    skills:
+      - authentication
+      - rest-api-v3
+      - jql-syntax
+      - pagination
+
+  - name: permissions-manager
+    description: >
+      Specialist in Jira user management, group administration,
+      project role assignment, permission scheme configuration,
+      and security level management.
+    prompt_file: agents/permissions-manager.md
+    skills:
+      - authentication
+      - rest-api-v3
+      - error-handling
+
+  - name: board-manager
+    description: >
+      Expert in Jira Software agile features including Scrum and Kanban
+      board configuration, sprint management, backlog grooming,
+      and velocity tracking via the Agile REST API.
+    prompt_file: agents/board-manager.md
+    skills:
+      - authentication
+      - rest-api-v3
+      - pagination
+
+  - name: schema-expert
+    description: >
+      Specialist in Jira schema configuration including custom field creation,
+      field configuration schemes, screen schemes, issue type schemes,
+      and issue type screen schemes.
+    prompt_file: agents/schema-expert.md
+    skills:
+      - authentication
+      - rest-api-v3
+      - error-handling
+
+skills:
+  - name: authentication
+    description: OAuth 2.0, API token, and basic auth patterns for Jira Cloud
+    file: skills/authentication.md
+
+  - name: rest-api-v3
+    description: Complete Jira Cloud REST API v3 endpoint reference
+    file: skills/rest-api-v3.md
+
+  - name: error-handling
+    description: HTTP error codes, error responses, and troubleshooting
+    file: skills/error-handling.md
+
+  - name: pagination
+    description: Pagination strategies for large result sets
+    file: skills/pagination.md
+
+  - name: jql-syntax
+    description: Complete JQL syntax with operators, functions, and keywords
+    file: skills/jql-syntax.md
+
+  - name: webhooks
+    description: Webhook registration, events, and payload handling
+    file: skills/webhooks.md
+
+  - name: bulk-operations
+    description: Batch operations for issues, fields, and permissions
+    file: skills/bulk-operations.md
+
+  - name: rate-limiting
+    description: Rate limiting policies and backoff strategies
+    file: skills/rate-limiting.md

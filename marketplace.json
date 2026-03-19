@@ -1,0 +1,181 @@
+{
+  "name": "JiraGenius",
+  "version": "1.0.0",
+  "description": "An expert Jira Cloud REST API plugin for Copilot CLI and Claude Code CLI. Provides sub-agents and skills for configuring, managing, and supporting Jira Cloud instances.",
+  "publisher": "promptclickrun",
+  "repository": "https://github.com/promptclickrun/JiraGenius",
+  "homepage": "https://github.com/promptclickrun/JiraGenius#readme",
+  "license": "MIT",
+  "keywords": [
+    "jira",
+    "jira-cloud",
+    "atlassian",
+    "rest-api",
+    "copilot-extension",
+    "claude-code-plugin",
+    "project-management",
+    "issue-tracking",
+    "agile",
+    "devops"
+  ],
+  "categories": [
+    "project-management",
+    "developer-tools",
+    "productivity",
+    "api-integration"
+  ],
+  "engines": {
+    "copilot-cli": ">=1.0.0",
+    "claude-code": ">=1.0.0"
+  },
+  "icon": "https://raw.githubusercontent.com/promptclickrun/JiraGenius/main/icon.png",
+  "install": {
+    "copilot": {
+      "command": "/plugin install promptclickrun/JiraGenius",
+      "type": "copilot-extension",
+      "entry": "copilot-extensions.yml"
+    },
+    "claude-code": {
+      "command": "/install-plugin https://github.com/promptclickrun/JiraGenius",
+      "type": "claude-code-plugin",
+      "entry": "CLAUDE.md",
+      "commands_dir": ".claude/commands"
+    }
+  },
+  "agents": [
+    {
+      "name": "coordinator",
+      "description": "Main orchestrator that routes Jira requests to the appropriate specialist sub-agent",
+      "file": "agents/coordinator.md"
+    },
+    {
+      "name": "issue-manager",
+      "description": "Expert in creating, reading, updating, deleting, and transitioning Jira issues",
+      "file": "agents/issue-manager.md"
+    },
+    {
+      "name": "project-admin",
+      "description": "Specialist in Jira project creation, configuration, schemes, and administration",
+      "file": "agents/project-admin.md"
+    },
+    {
+      "name": "workflow-designer",
+      "description": "Expert in designing and configuring Jira workflows, statuses, and transitions",
+      "file": "agents/workflow-designer.md"
+    },
+    {
+      "name": "search-analyst",
+      "description": "JQL query expert for advanced searching, filtering, and reporting in Jira",
+      "file": "agents/search-analyst.md"
+    },
+    {
+      "name": "permissions-manager",
+      "description": "Specialist in Jira users, groups, roles, and permission schemes",
+      "file": "agents/permissions-manager.md"
+    },
+    {
+      "name": "board-manager",
+      "description": "Expert in Scrum and Kanban boards, sprints, backlogs, and agile features",
+      "file": "agents/board-manager.md"
+    },
+    {
+      "name": "schema-expert",
+      "description": "Specialist in custom fields, field configurations, screens, and issue type schemes",
+      "file": "agents/schema-expert.md"
+    }
+  ],
+  "skills": [
+    {
+      "name": "authentication",
+      "description": "OAuth 2.0 and API token authentication for Jira Cloud",
+      "file": "skills/authentication.md"
+    },
+    {
+      "name": "rest-api-v3",
+      "description": "Complete Jira Cloud REST API v3 endpoint reference",
+      "file": "skills/rest-api-v3.md"
+    },
+    {
+      "name": "error-handling",
+      "description": "Jira API error codes, troubleshooting, and resolution patterns",
+      "file": "skills/error-handling.md"
+    },
+    {
+      "name": "pagination",
+      "description": "Pagination strategies for Jira Cloud REST API responses",
+      "file": "skills/pagination.md"
+    },
+    {
+      "name": "jql-syntax",
+      "description": "Complete JQL syntax reference with operators, functions, and keywords",
+      "file": "skills/jql-syntax.md"
+    },
+    {
+      "name": "webhooks",
+      "description": "Jira webhook registration, events, and payload handling",
+      "file": "skills/webhooks.md"
+    },
+    {
+      "name": "bulk-operations",
+      "description": "Bulk create, update, delete, and transition operations",
+      "file": "skills/bulk-operations.md"
+    },
+    {
+      "name": "rate-limiting",
+      "description": "Rate limiting policies, backoff strategies, and best practices",
+      "file": "skills/rate-limiting.md"
+    }
+  ],
+  "commands": [
+    {
+      "name": "jira-configure",
+      "description": "Configure Jira Cloud connection settings",
+      "file": ".claude/commands/jira-configure.md"
+    },
+    {
+      "name": "jira-issue",
+      "description": "Create, read, update, or delete Jira issues",
+      "file": ".claude/commands/jira-issue.md"
+    },
+    {
+      "name": "jira-project",
+      "description": "Manage Jira projects and project settings",
+      "file": ".claude/commands/jira-project.md"
+    },
+    {
+      "name": "jira-search",
+      "description": "Search Jira using JQL queries",
+      "file": ".claude/commands/jira-search.md"
+    },
+    {
+      "name": "jira-workflow",
+      "description": "Design and manage Jira workflows",
+      "file": ".claude/commands/jira-workflow.md"
+    },
+    {
+      "name": "jira-user",
+      "description": "Manage users, groups, and permissions",
+      "file": ".claude/commands/jira-user.md"
+    },
+    {
+      "name": "jira-board",
+      "description": "Manage boards, sprints, and backlogs",
+      "file": ".claude/commands/jira-board.md"
+    },
+    {
+      "name": "jira-field",
+      "description": "Manage custom fields and field configurations",
+      "file": ".claude/commands/jira-field.md"
+    },
+    {
+      "name": "jira-webhook",
+      "description": "Register and manage Jira webhooks",
+      "file": ".claude/commands/jira-webhook.md"
+    },
+    {
+      "name": "jira-bulk",
+      "description": "Perform bulk operations on Jira resources",
+      "file": ".claude/commands/jira-bulk.md"
+    }
+  ]
+}
