@@ -7,10 +7,7 @@
   "plugins": [
     {
       "name": "jiragenius",
-      "source": {
-        "source": "github",
-        "repo": "promptclickrun/JiraGenius"
-      },
+      "source": "./plugins/jiragenius",
       "description": "Expert Jira Cloud REST API plugin with sub-agents and skills for managing Jira instances through the official REST API v3.",
       "version": "1.0.0",
       "author": {
