@@ -1,0 +1,29 @@
+{
+  "name": "jiragenius",
+  "description": "Expert Jira Cloud REST API plugin with sub-agents and skills for configuring, managing, and supporting Jira Cloud instances.",
+  "owner": {
+    "name": "promptclickrun"
+  },
+  "plugins": [
+    {
+      "name": "jiragenius",
+      "source": ".",
+      "description": "Expert Jira Cloud REST API plugin with sub-agents and skills for managing Jira instances through the official REST API v3.",
+      "version": "1.0.0",
+      "author": {
+        "name": "promptclickrun"
+      },
+      "homepage": "https://github.com/promptclickrun/JiraGenius",
+      "repository": "https://github.com/promptclickrun/JiraGenius",
+      "license": "MIT",
+      "keywords": [
+        "jira",
+        "jira-cloud",
+        "atlassian",
+        "rest-api",
+        "project-management",
+        "agile"
+      ]
+    }
+  ]
+}
