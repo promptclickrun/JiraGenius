@@ -88,42 +88,42 @@
     {
       "name": "authentication",
       "description": "OAuth 2.0 and API token authentication for Jira Cloud",
-      "file": "skills/authentication.md"
+      "file": "skills/authentication/SKILL.md"
     },
     {
       "name": "rest-api-v3",
       "description": "Complete Jira Cloud REST API v3 endpoint reference",
-      "file": "skills/rest-api-v3.md"
+      "file": "skills/rest-api-v3/SKILL.md"
     },
     {
       "name": "error-handling",
       "description": "Jira API error codes, troubleshooting, and resolution patterns",
-      "file": "skills/error-handling.md"
+      "file": "skills/error-handling/SKILL.md"
     },
     {
       "name": "pagination",
       "description": "Pagination strategies for Jira Cloud REST API responses",
-      "file": "skills/pagination.md"
+      "file": "skills/pagination/SKILL.md"
     },
     {
       "name": "jql-syntax",
       "description": "Complete JQL syntax reference with operators, functions, and keywords",
-      "file": "skills/jql-syntax.md"
+      "file": "skills/jql-syntax/SKILL.md"
     },
     {
       "name": "webhooks",
       "description": "Jira webhook registration, events, and payload handling",
-      "file": "skills/webhooks.md"
+      "file": "skills/webhooks/SKILL.md"
     },
     {
       "name": "bulk-operations",
       "description": "Bulk create, update, delete, and transition operations",
-      "file": "skills/bulk-operations.md"
+      "file": "skills/bulk-operations/SKILL.md"
     },
     {
       "name": "rate-limiting",
       "description": "Rate limiting policies, backoff strategies, and best practices",
-      "file": "skills/rate-limiting.md"
+      "file": "skills/rate-limiting/SKILL.md"
     }
   ],
   "commands": [

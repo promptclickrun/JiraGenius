@@ -104,32 +104,32 @@ agents:
 skills:
   - name: authentication
     description: OAuth 2.0, API token, and basic auth patterns for Jira Cloud
-    file: skills/authentication.md
+    file: skills/authentication/SKILL.md
 
   - name: rest-api-v3
     description: Complete Jira Cloud REST API v3 endpoint reference
-    file: skills/rest-api-v3.md
+    file: skills/rest-api-v3/SKILL.md
 
   - name: error-handling
     description: HTTP error codes, error responses, and troubleshooting
-    file: skills/error-handling.md
+    file: skills/error-handling/SKILL.md
 
   - name: pagination
     description: Pagination strategies for large result sets
-    file: skills/pagination.md
+    file: skills/pagination/SKILL.md
 
   - name: jql-syntax
     description: Complete JQL syntax with operators, functions, and keywords
-    file: skills/jql-syntax.md
+    file: skills/jql-syntax/SKILL.md
 
   - name: webhooks
     description: Webhook registration, events, and payload handling
-    file: skills/webhooks.md
+    file: skills/webhooks/SKILL.md
 
   - name: bulk-operations
     description: Batch operations for issues, fields, and permissions
-    file: skills/bulk-operations.md
+    file: skills/bulk-operations/SKILL.md
 
   - name: rate-limiting
     description: Rate limiting policies and backoff strategies
-    file: skills/rate-limiting.md
+    file: skills/rate-limiting/SKILL.md

@@ -81,7 +81,7 @@ Cross-cutting skills available to all agents:
 
 ```
 JiraGenius/
-├── marketplace.json              # Plugin manifest for discovery and installation
+├── plugin.json                   # Plugin manifest (required for installation)
 ├── CLAUDE.md                     # Claude Code project instructions
 ├── copilot-extensions.yml        # GitHub Copilot Extensions configuration
 ├── .claude/commands/             # Claude Code slash commands
@@ -104,15 +104,15 @@ JiraGenius/
 │   ├── permissions-manager.md
 │   ├── board-manager.md
 │   └── schema-expert.md
-├── skills/                       # Shared skill references
-│   ├── authentication.md
-│   ├── rest-api-v3.md
-│   ├── error-handling.md
-│   ├── pagination.md
-│   ├── jql-syntax.md
-│   ├── webhooks.md
-│   ├── bulk-operations.md
-│   └── rate-limiting.md
+├── skills/                       # Shared skill definitions
+│   ├── authentication/SKILL.md
+│   ├── rest-api-v3/SKILL.md
+│   ├── error-handling/SKILL.md
+│   ├── pagination/SKILL.md
+│   ├── jql-syntax/SKILL.md
+│   ├── webhooks/SKILL.md
+│   ├── bulk-operations/SKILL.md
+│   └── rate-limiting/SKILL.md
 └── examples/                     # Usage examples
     ├── create-issue.md
     ├── bulk-update.md

@@ -1,0 +1,30 @@
+{
+  "name": "JiraGenius",
+  "description": "An expert Jira Cloud REST API plugin providing sub-agents and skills for configuring, managing, and supporting Jira Cloud instances through the official REST API v3.",
+  "version": "1.0.0",
+  "author": {
+    "name": "promptclickrun"
+  },
+  "repository": "https://github.com/promptclickrun/JiraGenius",
+  "license": "MIT",
+  "keywords": [
+    "jira",
+    "jira-cloud",
+    "atlassian",
+    "rest-api",
+    "project-management",
+    "agile",
+    "devops"
+  ],
+  "agents": ["./agents"],
+  "skills": [
+    "./skills/authentication",
+    "./skills/rest-api-v3",
+    "./skills/error-handling",
+    "./skills/pagination",
+    "./skills/jql-syntax",
+    "./skills/webhooks",
+    "./skills/bulk-operations",
+    "./skills/rate-limiting"
+  ]
+}
