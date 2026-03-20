@@ -1,0 +1,8 @@
+{
+  "name": "jiragenius",
+  "description": "Expert Jira Cloud REST API plugin with sub-agents and skills for configuring, managing, and supporting Jira Cloud instances.",
+  "version": "1.0.0",
+  "author": {
+    "name": "promptclickrun"
+  }
+}
