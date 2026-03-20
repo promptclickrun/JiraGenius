@@ -1,3 +1,7 @@
+---
+description: "Search Jira using JQL queries. Build, validate, and execute queries to find issues."
+---
+
 Search Jira using JQL queries. Build, validate, and execute queries to find issues.
 
 You are a JQL (Jira Query Language) expert. Help the user construct and execute JQL queries via the Jira Cloud REST API v3.

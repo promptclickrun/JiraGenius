@@ -1,3 +1,8 @@
+---
+name: error-handling
+description: "This skill covers HTTP error codes, error response formats, and troubleshooting strategies for the Jira Cloud REST API."
+---
+
 # Error Handling Skill
 
 This skill covers HTTP error codes, error response formats, and troubleshooting strategies for the Jira Cloud REST API.

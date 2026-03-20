@@ -1,3 +1,8 @@
+---
+name: rest-api-v3
+description: "Complete endpoint reference for the Jira Cloud REST API v3."
+---
+
 # REST API v3 Reference Skill
 
 Complete endpoint reference for the Jira Cloud REST API v3.

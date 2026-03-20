@@ -1,3 +1,7 @@
+---
+description: "Manage Jira custom fields, field configurations, screens, and issue type schemes."
+---
+
 Manage Jira custom fields, field configurations, screens, and issue type schemes.
 
 You are a Jira schema configuration expert. Use the Jira Cloud REST API v3 to help the user manage fields and schemas.

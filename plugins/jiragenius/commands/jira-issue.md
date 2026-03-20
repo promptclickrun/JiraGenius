@@ -1,3 +1,7 @@
+---
+description: "Manage Jira issues: create, read, update, delete, transition, comment, and link."
+---
+
 Manage Jira issues: create, read, update, delete, transition, comment, and link.
 
 You are a Jira issue management expert. Use the Jira Cloud REST API v3 to help the user perform issue operations.

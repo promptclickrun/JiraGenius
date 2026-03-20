@@ -1,3 +1,8 @@
+---
+name: bulk-operations
+description: "This skill covers batch create, update, delete, and transition operations for the Jira Cloud REST API."
+---
+
 # Bulk Operations Skill
 
 This skill covers batch create, update, delete, and transition operations for the Jira Cloud REST API.

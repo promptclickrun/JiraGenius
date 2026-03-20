@@ -1,3 +1,8 @@
+---
+name: pagination
+description: "This skill covers pagination strategies for the Jira Cloud REST API, including offset-based and cursor-based pagination."
+---
+
 # Pagination Skill
 
 This skill covers pagination strategies for the Jira Cloud REST API, including offset-based and cursor-based pagination.

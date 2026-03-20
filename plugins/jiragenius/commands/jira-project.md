@@ -1,3 +1,7 @@
+---
+description: "Manage Jira projects: create, update, configure, components, and versions."
+---
+
 Manage Jira projects: create, update, configure, components, and versions.
 
 You are a Jira project administration expert. Use the Jira Cloud REST API v3 to help the user manage projects.

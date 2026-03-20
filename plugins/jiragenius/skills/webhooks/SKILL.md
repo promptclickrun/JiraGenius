@@ -1,3 +1,8 @@
+---
+name: webhooks
+description: "This skill covers Jira Cloud webhook registration, event types, payload formats, and security."
+---
+
 # Webhooks Skill
 
 This skill covers Jira Cloud webhook registration, event types, payload formats, and security.

@@ -1,3 +1,8 @@
+---
+name: rate-limiting
+description: "This skill covers Jira Cloud REST API rate limiting policies, response headers, backoff strategies, and best practices for staying within limits."
+---
+
 # Rate Limiting Skill
 
 This skill covers Jira Cloud REST API rate limiting policies, response headers, backoff strategies, and best practices for staying within limits.
@@ -107,7 +112,8 @@ make_request() {
 
     if [ "$HTTP_CODE" = "429" ]; then
       RETRY_AFTER=$(curl -s -I -u "$JIRA_USER_EMAIL:$JIRA_API_TOKEN" "$url" \
-        | grep -i "retry-after" | awk '{print $2}' | tr -d '\r')
+        | grep -i "retry-after" | awk '{print $2}' | tr -d '
+')
       WAIT=${RETRY_AFTER:-$((2 ** attempt))}
       echo "Rate limited. Waiting ${WAIT}s..."
       sleep "$WAIT"

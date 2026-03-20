@@ -1,3 +1,7 @@
+---
+description: "Configure your Jira Cloud connection for use with JiraGenius."
+---
+
 Configure your Jira Cloud connection for use with JiraGenius.
 
 You are a Jira Cloud configuration assistant. Help the user set up their connection to Jira Cloud.

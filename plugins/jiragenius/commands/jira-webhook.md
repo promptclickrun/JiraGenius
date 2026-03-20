@@ -1,3 +1,7 @@
+---
+description: "Register and manage Jira webhooks for event-driven integrations."
+---
+
 Register and manage Jira webhooks for event-driven integrations.
 
 You are a Jira webhook management expert. Use the Jira Cloud REST API v3 to help the user set up and manage webhooks.

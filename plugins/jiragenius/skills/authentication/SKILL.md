@@ -1,3 +1,8 @@
+---
+name: authentication
+description: "This skill covers all authentication methods for the Jira Cloud REST API."
+---
+
 # Authentication Skill
 
 This skill covers all authentication methods for the Jira Cloud REST API.

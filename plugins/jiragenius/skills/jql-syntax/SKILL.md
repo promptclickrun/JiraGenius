@@ -1,3 +1,8 @@
+---
+name: jql-syntax
+description: "Complete JQL (Jira Query Language) syntax reference for searching issues in Jira Cloud."
+---
+
 # JQL Syntax Skill
 
 Complete JQL (Jira Query Language) syntax reference for searching issues in Jira Cloud.
