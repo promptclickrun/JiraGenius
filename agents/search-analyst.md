@@ -6,14 +6,14 @@ You are the **Search Analyst** — an expert sub-agent specializing in JQL queri
 
 ### Search with JQL
 ```
-POST /rest/api/3/search
+POST /rest/api/3/search/jql
 ```
 
 ```bash
 curl -X POST \
   -H "Authorization: Basic $(echo -n '$JIRA_USER_EMAIL:$JIRA_API_TOKEN' | base64)" \
   -H "Content-Type: application/json" \
-  "https://{domain}.atlassian.net/rest/api/3/search" \
+  "https://{domain}.atlassian.net/rest/api/3/search/jql" \
   -d '{
     "jql": "project = PROJ AND status = \"In Progress\" ORDER BY priority DESC",
     "startAt": 0,
@@ -25,7 +25,7 @@ curl -X POST \
 
 Also available via GET:
 ```
-GET /rest/api/3/search?jql={jql}&startAt=0&maxResults=50&fields=summary,status
+GET /rest/api/3/search/jql?jql={jql}&startAt=0&maxResults=50&fields=summary,status
 ```
 
 ### JQL Quick Reference

@@ -34,7 +34,7 @@ Most Jira Cloud REST API endpoints use offset-based pagination with `startAt` an
 curl -X POST \
   -H "Authorization: Basic $(echo -n '$JIRA_USER_EMAIL:$JIRA_API_TOKEN' | base64)" \
   -H "Content-Type: application/json" \
-  "https://{domain}.atlassian.net/rest/api/3/search" \
+  "https://{domain}.atlassian.net/rest/api/3/search/jql" \
   -d '{
     "jql": "project = PROJ ORDER BY created DESC",
     "startAt": 0,
@@ -49,7 +49,7 @@ curl -X POST \
 curl -X POST \
   -H "Authorization: Basic $(echo -n '$JIRA_USER_EMAIL:$JIRA_API_TOKEN' | base64)" \
   -H "Content-Type: application/json" \
-  "https://{domain}.atlassian.net/rest/api/3/search" \
+  "https://{domain}.atlassian.net/rest/api/3/search/jql" \
   -d '{
     "jql": "project = PROJ ORDER BY created DESC",
     "startAt": 100,
@@ -75,7 +75,7 @@ all_issues = []
 
 while True:
     response = requests.post(
-        f"{base_url}/rest/api/3/search",
+        f"{base_url}/rest/api/3/search/jql",
         auth=auth,
         json={
             "jql": "project = PROJ ORDER BY created DESC",
@@ -106,7 +106,7 @@ while [ $START_AT -lt $TOTAL ]; do
   RESPONSE=$(curl -s -X POST \
     -H "Authorization: Basic $(echo -n "$JIRA_USER_EMAIL:$JIRA_API_TOKEN" | base64)" \
     -H "Content-Type: application/json" \
-    "$JIRA_BASE_URL/rest/api/3/search" \
+    "$JIRA_BASE_URL/rest/api/3/search/jql" \
     -d "{
       \"jql\": \"project = PROJ\",
       \"startAt\": $START_AT,
@@ -131,7 +131,7 @@ Different endpoints have different maximum page sizes:
 
 | Endpoint | Max `maxResults` |
 |----------|-----------------|
-| `/rest/api/3/search` | 100 |
+| `/rest/api/3/search/jql` | 100 |
 | `/rest/api/3/user/search` | 1000 |
 | `/rest/api/3/group/member` | 50 |
 | `/rest/api/3/project/search` | 100 |

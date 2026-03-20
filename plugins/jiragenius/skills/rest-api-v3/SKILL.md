@@ -48,8 +48,8 @@ Complete endpoint reference for the Jira Cloud REST API v3.
 
 | Method | Endpoint | Description |
 |--------|----------|-------------|
-| `GET` | `/rest/api/3/search` | Search with JQL (GET) |
-| `POST` | `/rest/api/3/search` | Search with JQL (POST) |
+| `GET` | `/rest/api/3/search/jql` | Search with JQL (GET) |
+| `POST` | `/rest/api/3/search/jql` | Search with JQL (POST) |
 | `GET` | `/rest/api/3/search/approximate-count` | Get approximate issue count |
 
 ### Projects

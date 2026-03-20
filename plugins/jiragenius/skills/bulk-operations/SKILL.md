@@ -93,7 +93,7 @@ while [ $START_AT -lt $TOTAL ]; do
   RESPONSE=$(curl -s -X POST \
     -u "$JIRA_USER_EMAIL:$JIRA_API_TOKEN" \
     -H "Content-Type: application/json" \
-    "$JIRA_BASE_URL/rest/api/3/search" \
+    "$JIRA_BASE_URL/rest/api/3/search/jql" \
     -d "{
       \"jql\": \"$JQL\",
       \"startAt\": $START_AT,
@@ -142,7 +142,7 @@ updated = 0
 
 while True:
     response = requests.post(
-        f"{base_url}/rest/api/3/search",
+        f"{base_url}/rest/api/3/search/jql",
         auth=auth,
         json={
             "jql": jql,
@@ -198,7 +198,7 @@ echo "Using transition ID: $TRANSITION_ID"
 RESPONSE=$(curl -s -X POST \
   -u "$JIRA_USER_EMAIL:$JIRA_API_TOKEN" \
   -H "Content-Type: application/json" \
-  "$JIRA_BASE_URL/rest/api/3/search" \
+  "$JIRA_BASE_URL/rest/api/3/search/jql" \
   -d '{
     "jql": "project = PROJ AND status = \"In Review\" AND fixVersion = \"v1.0.0\"",
     "fields": ["key"]
@@ -231,7 +231,7 @@ done
 RESPONSE=$(curl -s -X POST \
   -u "$JIRA_USER_EMAIL:$JIRA_API_TOKEN" \
   -H "Content-Type: application/json" \
-  "$JIRA_BASE_URL/rest/api/3/search" \
+  "$JIRA_BASE_URL/rest/api/3/search/jql" \
   -d '{
     "jql": "project = TEST AND issuetype = \"Test Issue\"",
     "fields": ["key"]
@@ -274,7 +274,7 @@ curl -X POST \
 RESPONSE=$(curl -s -X POST \
   -u "$JIRA_USER_EMAIL:$JIRA_API_TOKEN" \
   -H "Content-Type: application/json" \
-  "$JIRA_BASE_URL/rest/api/3/search" \
+  "$JIRA_BASE_URL/rest/api/3/search/jql" \
   -d '{
     "jql": "project = PROJ AND component = \"Legacy API\"",
     "fields": ["key", "labels"]

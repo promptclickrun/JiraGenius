@@ -42,7 +42,7 @@ Maximum 50 issues per bulk create request.
 curl -s -X POST \
   -u "$JIRA_USER_EMAIL:$JIRA_API_TOKEN" \
   -H "Content-Type: application/json" \
-  "$JIRA_BASE_URL/rest/api/3/search" \
+  "$JIRA_BASE_URL/rest/api/3/search/jql" \
   -d '{"jql": "YOUR_JQL_QUERY", "fields": ["key"]}'
 
 # 2. Update each issue (with rate limiting)

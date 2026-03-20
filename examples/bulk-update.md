@@ -71,7 +71,7 @@ while [ $START_AT -lt $TOTAL ]; do
   RESPONSE=$(curl -s -X POST \
     -u "$JIRA_USER_EMAIL:$JIRA_API_TOKEN" \
     -H "Content-Type: application/json" \
-    "$JIRA_BASE_URL/rest/api/3/search" \
+    "$JIRA_BASE_URL/rest/api/3/search/jql" \
     -d "{
       \"jql\": \"assignee = '$OLD_USER' AND resolution = Unresolved\",
       \"startAt\": $START_AT,
@@ -118,7 +118,7 @@ TRANSITION_ID="41"
 RESPONSE=$(curl -s -X POST \
   -u "$JIRA_USER_EMAIL:$JIRA_API_TOKEN" \
   -H "Content-Type: application/json" \
-  "$JIRA_BASE_URL/rest/api/3/search" \
+  "$JIRA_BASE_URL/rest/api/3/search/jql" \
   -d '{
     "jql": "project = PROJ AND status = Resolved",
     "fields": ["key"],
@@ -152,7 +152,7 @@ JQL="project = PROJ AND labels = backend AND component IS EMPTY"
 RESPONSE=$(curl -s -X POST \
   -u "$JIRA_USER_EMAIL:$JIRA_API_TOKEN" \
   -H "Content-Type: application/json" \
-  "$JIRA_BASE_URL/rest/api/3/search" \
+  "$JIRA_BASE_URL/rest/api/3/search/jql" \
   -d "{
     \"jql\": \"$JQL\",
     \"fields\": [\"key\"],

@@ -186,7 +186,7 @@ curl -X POST \
   -u "$JIRA_USER_EMAIL:$JIRA_API_TOKEN" \
   -H "Content-Type: application/json" \
   -H "Accept: application/json" \
-  "$JIRA_BASE_URL/rest/api/3/search" \
+  "$JIRA_BASE_URL/rest/api/3/search/jql" \
   -d '{
     "jql": "project = PROJ AND sprint in openSprints() ORDER BY rank ASC",
     "startAt": 0,
@@ -198,7 +198,7 @@ curl -X POST \
 curl -G \
   -u "$JIRA_USER_EMAIL:$JIRA_API_TOKEN" \
   -H "Accept: application/json" \
-  "$JIRA_BASE_URL/rest/api/3/search" \
+  "$JIRA_BASE_URL/rest/api/3/search/jql" \
   --data-urlencode "jql=assignee = currentUser() AND resolution = Unresolved" \
   --data-urlencode "maxResults=20"
 ```
